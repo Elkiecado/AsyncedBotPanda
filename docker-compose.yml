@@ -1,6 +1,5 @@
 services:
   panda-bot:
-    image: ghcr.io/<твой-github-username>/asyncpandabot:latest
     build: .
     restart: unless-stopped
     env_file:
