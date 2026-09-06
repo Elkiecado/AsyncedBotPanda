@@ -1,0 +1,4 @@
+vkbottle>=4.4,<5.0
+pydantic>=2.0,<3.0
+aiosqlite>=0.20,<1.0
+python-dotenv>=1.0,<2.0
