@@ -1,0 +1,22 @@
+services:
+  panda-bot:
+    image: ghcr.io/<твой-github-username>/asyncpandabot:latest
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - DB_PATH=/app/data/database.db
+    volumes:
+      - ./data:/app/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "test", "-f", "/app/data/heartbeat"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
