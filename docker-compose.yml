@@ -1,6 +1,6 @@
 services:
   panda-bot:
-    build: .
+    image: ghcr.io/elkiecado/asyncedbotpanda:latest
     restart: unless-stopped
     env_file:
       - .env
