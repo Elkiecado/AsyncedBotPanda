@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/AsyncedBotPanda
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/asyncedbotpanda
 
 jobs:
   build-and-push:
